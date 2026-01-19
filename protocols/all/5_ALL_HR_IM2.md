@@ -33,4 +33,5 @@ Interim Maintenance II begins on Day 57 of DI or when ANC ≥ 750/µL and platel
 -	Dosage: 6,000 International Units/m2/dose
 -	Used on Day 2, 4, 6, Day 9, 11, 13, Day 22, 24, 26, Day 29, 31, 33 (MWF x 6 doses)
 -	Caution: Monitor for one hour after dose for any signs/symptoms of allergic reaction/anaphylaxis
+
 Begin next course (Maintenance) on Day 57 or when blood count parameters are met (whichever occurs later).

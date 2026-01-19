@@ -38,7 +38,7 @@ Delayed Intensification is 8 weeks (56 days). Begin DI on Day 57 of IM 1 or when
 **L-asparaginase**
 -	Route: IM
 -	Dosage: 6,000 International Units/m2/dose
--	Used on Day 8, 10, 12, Day 15, 17, 19
+-	Used on Day 8, 10, 12, 15, 17, 19, 43, 45, 47, 50, 52, 54
 -	Caution: Monitor for one hour after dose for any signs/symptoms of allergic reaction/anaphylaxis
 
 **Cyclophosphamide (CPM)**
