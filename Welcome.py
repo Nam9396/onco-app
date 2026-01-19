@@ -58,14 +58,14 @@ if "protocol" not in st.session_state:
 # form section
 
 with st.form(key='protocol_form'):
-    dob = st.date_input(
-        "Ngày sinh",
-        value=None,  # mặc định không chọn
-        min_value=date(1900, 1, 1),
-        max_value=date.today(),
-        help="Chọn ngày sinh của bệnh nhi"
+    age = st.number_input(
+        "Nhập tuổi (năm)",
+        min_value=1,
+        max_value=18,
+        step=1,
+        value=None,
+        placeholder="Nhập tuổi (năm)",
     )
-    auto_age = calculate_age(dob) if dob else None
     wt = st.number_input(
         "Cân nặng (kg)",
         min_value=1.0,
@@ -94,13 +94,12 @@ with st.form(key='protocol_form'):
 
     submit = st.form_submit_button('Thực hiện')
 
-if submit and dob and wt and ht and bsa and protocol :
+if submit and age and wt and ht and bsa and protocol :
     tz = pytz.timezone("Asia/Ho_Chi_Minh")
     now = datetime.now(tz)
     
     st.session_state["base_info"] = {
-        "dob": dob,
-        "age": auto_age,
+        "age": age,
         "weight": wt,
         "height": ht,
         "bsa": round(bsa, 3),
