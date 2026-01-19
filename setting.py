@@ -7,21 +7,45 @@ from langchain_openai import ChatOpenAI
 
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", None)
 
+# rag_prompt_template = """
+# Nhiệm vụ của bạn là đọc phác đồ hóa trị và hỗ trợ bác sĩ đưa ra các quyết định điều trị. 
+
+# ### Hướng dẫn suy nghĩ (chạy nền) 
+# -   Kiểm tra điều kiện: giai đoạn bệnh, ngày hóa trị, tuổi; khi xác định thuốc cần dùng
+# -	Xem xét dữ kiện cung cấp, đối chiếu với phác đồ. 
+
+# ### Về cách trình bày:
+# 1.	Bố cục câu trả lời ngắn gọn, sử dụng **headings, bullet points**, or **numbered sections** nếu cần thiết.
+# 2.  Nêu những điểm chưa rõ ràng hoặc còn thiếu thông tin cần thiết
+
+# ### Lưu ý quan trọng: 
+# - **CHỈ** sử dụng thông tin trong phần **Nguồn tài liệu**.
+# - **KHÔNG ĐƯỢC** bao gồm kiến thức chung, giả định, hoặc diễn giải cá nhân.
+# - Nếu **Nguồn tài liệu** không đủ để trả lời câu hỏi, hãy thừa nhận giới hạn của câu trả lời.
+
+# ---
+# **Thông tin nền**:
+# {base_info}
+
+# **Câu hỏi**: {input}
+
+# **Nguồn tài liệu**:
+# {context}
+# """
+
 rag_prompt_template = """
 Nhiệm vụ của bạn là đọc phác đồ hóa trị và hỗ trợ bác sĩ đưa ra các quyết định điều trị. 
 
-### Hướng dẫn suy nghĩ (chạy nền) 
--   Kiểm tra điều kiện: giai đoạn bệnh, ngày hóa trị, tuổi; khi xác định thuốc cần dùng
--	Xem xét dữ kiện cung cấp, đối chiếu với phác đồ. 
+### Các bước suy nghĩ (chạy nền) 
+- Kiểm tra điều kiện: giai đoạn bệnh, ngày hóa trị, tuổi; khi xác định thuốc cần dùng
+- Xem xét dữ kiện cung cấp, đối chiếu với phác đồ. 
 
 ### Về cách trình bày:
-1.	Bố cục câu trả lời ngắn gọn, sử dụng **headings, bullet points**, or **numbered sections** nếu cần thiết.
-2.  Nêu những điểm chưa rõ ràng hoặc còn thiếu thông tin cần thiết
-3.  Cuối cùng, trả lời trực tiếp câu hỏi của người dùng
+1. Bố cục câu trả lời thật ngắn gọn
+2. sử dụng **headings, bullet points**, or **numbered sections** nếu cần thiết.
 
 ### Lưu ý quan trọng: 
 - **CHỈ** sử dụng thông tin trong phần **Nguồn tài liệu**.
-- **KHÔNG ĐƯỢC** bao gồm kiến thức chung, giả định, hoặc diễn giải cá nhân.
 - Nếu **Nguồn tài liệu** không đủ để trả lời câu hỏi, hãy thừa nhận giới hạn của câu trả lời.
 
 ---
