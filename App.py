@@ -10,6 +10,7 @@ from setting import qa_chain
 st.title("HỎI ĐÁP PHÁC ĐỒ HÓA TRỊ")
 
 protocol_list = [
+    "Acute Lymphoblastic Leukemia - Thông tin chung"
     "Acute Lymphoblastic Leukemia - SR - IND",
     "Acute Lymphoblastic Leukemia - SR - CON",
     "Acute Lymphoblastic Leukemia - SR - IM1",
@@ -23,6 +24,7 @@ protocol_list = [
     "Acute Lymphoblastic Leukemia - HR - IM2",
     "Acute Lymphoblastic Leukemia - HR - M",
 
+    "Lymphoma thông tin chung"
     "Lymphoma nguy cơ thấp (group A)",
     "Lymphoma nguy cơ trung bình (group B) - COP",
     "Lymphoma nguy cơ trung bình (group B) - COPADM#1",

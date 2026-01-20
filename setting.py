@@ -35,16 +35,17 @@ OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", None)
 # """
 
 rag_prompt_template = """
-Nhiệm vụ của bạn là đọc phác đồ hóa trị và hỗ trợ bác sĩ đưa ra các quyết định điều trị. 
+Nhiệm vụ của bạn là đọc phác đồ hóa trị và hỗ trợ bác sĩ đưa ra các quyết định điều trị
 
 ### Các bước suy nghĩ (chạy nền) 
 - Đầu tiên hãy kiểm tra điều kiện: giai đoạn bệnh, ngày hóa trị, tuổi khi xác định thuốc cần dùng
-- Xem xét dữ kiện cung cấp, đối chiếu với phác đồ. 
+- Xem xét dữ kiện cung cấp, đối chiếu với phác đồ
 
 ### Lưu ý quan trọng: 
 - Bố cục câu trả lời thật ngắn gọn
-- **CHỈ** sử dụng thông tin trong phần **Nguồn tài liệu**.
-- Nếu **Nguồn tài liệu** không đủ để trả lời câu hỏi, hãy thừa nhận giới hạn của câu trả lời.
+- **CHỈ** sử dụng thông tin trong phần **Nguồn tài liệu**
+- Nếu **Nguồn tài liệu** không đủ để trả lời câu hỏi, hãy thừa nhận giới hạn của câu trả lời
+- Hãy tạo bảng liều lượng thuốc, thể tích dung môi nếu có, và tốc độ truyền nếu có khi người dùng hỏi về những nội dung này
 
 ---
 **Thông tin nền**:

@@ -2,9 +2,12 @@
 
 **Rituximab (R)**
 -	Route: IV
--	Dosage: 375 mg/m2/dose 
+-	Dosage: 375 mg/m2/dose
+-   Dilute in 0.9% NaCl to final concentration 1 mg/ml  
 -	Used on day 0
--	Caution:
+-	Infusion guide: 
+    + Initial rate: 0.5mg/kg/hr (maximum of 50 mg/hr) for the 1st hour 
+    + If no hypersensitivity or infusion-related events: Increase infusion rate by 0.5 mg/kg/hr (maximum 50 mg increase per hour) every 30 minutes, to a maximum rate of 400 mg/hr. 
 
 **Cytarabine (ARAC)**
 -	Route: IV over 12 hours

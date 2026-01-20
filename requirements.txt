@@ -8,8 +8,3 @@ faiss-cpu
 pymupdf
 tiktoken
 streamlit
-biopython
-xmltodict
-huggingface-hub
-langchain-huggingface
-gradio-client
