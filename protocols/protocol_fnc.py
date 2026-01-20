@@ -3,7 +3,7 @@ import streamlit as st
 
 PROTOCOL_REGISTRY = {
 # bạch cầu cấp
-    "Acute Lymphoblastic Leukemia - Thông tin chung": "all/LYMPH",
+    "Acute Lymphoblastic Leukemia - Thông tin chung": "all/ALL",
     "Acute Lymphoblastic Leukemia - SR - IND": "all/1_ALL_SR_IND",
     "Acute Lymphoblastic Leukemia - SR - CON": "all/2_ALL_SR_CON",
     "Acute Lymphoblastic Leukemia - SR - IM1": "all/3_ALL_SR_IM1",
