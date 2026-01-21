@@ -72,7 +72,7 @@ with st.form(key='protocol_form'):
     )
 
     if wt is not None and ht is not None:
-        bsa = round(math.sqrt(wt * ht / 3600), 2)
+        bsa = math.sqrt(wt * ht / 3600)
     
     protocol_code = st.selectbox(
         "Tên phác đồ hóa trị",
@@ -91,7 +91,7 @@ if submit and age and wt and ht and bsa and protocol_code :
         "age": age,
         "weight": wt,
         "height": ht,
-        "bsa": round(bsa, 3),
+        "bsa": round(bsa, 2),
         "now": now
     }
 
