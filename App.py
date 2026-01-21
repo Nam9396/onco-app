@@ -72,7 +72,7 @@ with st.form(key='protocol_form'):
     )
 
     if wt is not None and ht is not None:
-        bsa = math.sqrt(wt * ht / 3600)
+        bsa = round(math.sqrt(wt * ht / 3600), 2)
     
     protocol_code = st.selectbox(
         "Tên phác đồ hóa trị",
